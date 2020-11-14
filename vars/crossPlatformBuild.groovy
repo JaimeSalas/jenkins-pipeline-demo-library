@@ -30,7 +30,7 @@ def call(Map config) {
                 parallel {
                     stage('linux-amd64') {
                         environment {
-                            BUILD_CONTEXT = getBuildContext(config, env.SATGE_NAME)
+                            BUILD_CONTEXT = getBuildContext(config, env.STAGE_NAME)
                             TAG = "$STAGE_NAME"
                             DOCKER_SERVER = "$DOCKER_LINUX_SERVER"
                         }
@@ -42,7 +42,7 @@ def call(Map config) {
                     }
                     stage('windows-amd64') {
                         environment {
-                            BUILD_CONTEXT = getBuildContext(config, env.SATGE_NAME)
+                            BUILD_CONTEXT = getBuildContext(config, env.STAGE_NAME)
                             TAG = "$STAGE_NAME"
                             DOCKER_SERVER = "$DOCKER_WINDOWS_SERVER"
                         }
