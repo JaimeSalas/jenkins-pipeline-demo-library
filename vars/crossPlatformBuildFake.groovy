@@ -50,7 +50,7 @@ def call(Map config) {
                     }
                 }
             }
-            satge('notify') {
+            stage('notify') {
                 steps {
                     echo "https://hub.docker.com/r/$REPO_NAME"
                 }
